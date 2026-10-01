@@ -68,6 +68,7 @@ public class MethodCallImplementation implements MethodChannel.MethodCallHandler
         switch (call.method) {
             case "initialize":
                 initialize(call);
+                result.success(null);
                 break;
             case "getLaunchAction":
                 getLaunchAction(result);
@@ -80,6 +81,7 @@ public class MethodCallImplementation implements MethodChannel.MethodCallHandler
                 break;
             case "setShortcutItems":
                 setShortcutItems(call);
+                result.success(null);
                 break;
             case "pushShortcutItem":
                 pushShortcutItem(call);
@@ -87,19 +89,24 @@ public class MethodCallImplementation implements MethodChannel.MethodCallHandler
                 break;
             case "pushShortcutItems":
                 pushShortcutItems(call);
+                result.success(null);
                 break;
             case "updateShortcutItems":
                 updateShortcutItems(call);
+                result.success(null);
                 break;
             case "updateShortcutItem":
                 updateShortcutItem(call);
+                result.success(null);
                 break;
             case "changeShortcutItemIcon":
                 changeShortcutItemIcon(call);
+                result.success(null);
                 break;
             case "clearShortcutItems":
                 ShortcutManagerCompat.removeAllDynamicShortcuts(context);
                 debugPrint("Removed all shortcuts.");
+                result.success(null);
                 break;
             default:
                 result.notImplemented();
