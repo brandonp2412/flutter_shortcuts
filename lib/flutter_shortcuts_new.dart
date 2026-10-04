@@ -17,13 +17,13 @@ export 'package:flutter_shortcuts_new/src/helper/helper.dart';
 
 class FlutterShortcuts {
   /// [initialize] initializes the flutter_shortcuts_new plugin.
-  Future<void> initialize({bool debug = true}) async {
-    FlutterShortcutsPlatform.instance.initialize(debug);
+  Future<void> initialize({bool debug = true}) {
+    return FlutterShortcutsPlatform.instance.initialize(debug);
   }
 
   /// [listenAction] performs action when shortcut is initiated.
-  Future<void> listenAction(ShortcutAction action) async {
-    FlutterShortcutsPlatform.instance.listenAction(action);
+  Future<void> listenAction(ShortcutAction action) {
+    return FlutterShortcutsPlatform.instance.listenAction(action);
   }
 
   /// [getMaxShortcutLimit] returns the maximum number of static or dynamic
