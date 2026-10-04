@@ -218,7 +218,7 @@ public class MethodCallImplementation implements MethodChannel.MethodCallHandler
         final String icon = (String) info.get("icon");
         final String action = (String) info.get("action");
         final String shortLabel = (String) info.get("shortLabel");
-        final String longLabel = (String) info.get("LongLabel");
+        final String longLabel = (String) info.get("longLabel");
         final int iconType = Integer.parseInt(Objects.requireNonNull( (String) info.get("shortcutIconType")));
 
         final boolean isImportant = (boolean) info.get("isImportant");
@@ -329,7 +329,7 @@ public class MethodCallImplementation implements MethodChannel.MethodCallHandler
             final String shortLabel = (String) shortcut.get("shortLabel");
 
             // Long Label for the shortcut
-            final String longLabel = (String) shortcut.get("LongLabel");
+            final String longLabel = (String) shortcut.get("longLabel");
 
             final boolean isImportant = (boolean) shortcut.get("isImportant");
             final boolean isBot = (boolean) shortcut.get("isBot");
