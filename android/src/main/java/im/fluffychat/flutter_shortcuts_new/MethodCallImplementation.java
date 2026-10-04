@@ -186,7 +186,9 @@ public class MethodCallImplementation implements MethodChannel.MethodCallHandler
         List<ShortcutInfoCompat> shortcuts;
         try {
             shortcuts = shortcutInfoCompatList(args);
-            ShortcutManagerCompat.addDynamicShortcuts(context,shortcuts);
+            for (ShortcutInfoCompat shortcut : shortcuts) {
+                ShortcutManagerCompat.pushDynamicShortcut(context, shortcut);
+            }
             debugPrint("Shortcuts pushed");
         } catch (Exception e) {
             Log.e(TAG,e.toString());
